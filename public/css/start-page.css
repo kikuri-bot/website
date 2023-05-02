@@ -1,0 +1,104 @@
+.main-view-half-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#main-view-header {
+    font-size: 2.5rem;
+}
+
+#main-view-text {
+    font-size: 1.25rem;
+}
+
+#main-view-button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#main-view-button-container a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: normal;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    transition: 100ms background-color;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: 1px solid var(--theme-color);
+}
+
+#main-view-button-container a:hover {
+    cursor: pointer;
+    background-color: var(--theme-color);
+    transition: 100ms background-color;
+}
+
+#main-view-button-container a:last-child {
+    margin-left: 1rem;
+}
+
+#main-view-avatar-container {
+    align-items: center;
+}
+
+#main-view-avatar-border {
+    display: flex;
+    border: min(0.5rem, 1.5vw) solid var(--theme-color);
+    border-radius: 100%;
+    width: 320px;
+    height: 320px;
+    max-width: 35vw;
+    max-height: 35vw;
+    overflow: hidden;
+}
+
+#main-view-avatar, .card-gallery-border img {
+    height: 100%;
+    width: 100%;
+}
+
+#card-gallery-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+}
+
+.card-gallery-border {
+    display: flex;
+    height: 364;
+    width: 237;
+    max-width: 25vw;
+    max-height: 25vw;
+}
+
+.card-gallery-border:first-child {
+    z-index: 0;
+    transform: rotate(-14deg) translateX(2rem) translateY(4rem);
+	transform-origin: center center;
+}
+
+.card-gallery-border:nth-child(2) {
+    z-index: 1;
+    transform: rotate(-6deg) translateX(1rem) translateY(1rem);
+	transform-origin: center center;
+}
+
+.card-gallery-border:nth-child(3) {
+    z-index: 2;
+}
+
+.card-gallery-border:nth-child(4) {
+    z-index: 1;
+    transform: rotate(6deg) translateX(-1rem) translateY(1rem);
+	transform-origin: center center;
+}
+
+.card-gallery-border:last-child {
+    z-index: 0;
+    transform: rotate(14deg) translateX(-2rem) translateY(4rem);
+	transform-origin: center center;
+}

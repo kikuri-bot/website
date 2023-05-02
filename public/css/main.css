@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/rubik.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #171c23;
+    --alt-bg-color: #08090d;
+    --text-color: #e2e2e2;
+    --theme-color: #ba3f3d;
+    --theme-seo-color: #eb4b48;
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+    border-radius: 8px;
+    border: 0 solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--alt-bg-color);
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    transition-property: background-color;
+    transition-duration: 200ms;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+hr {
+    border: 1px solid var(--theme-color);
+    border-radius: 8px;
+    width: 100%;
+    height: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+i {
+    font-style: normal;
+    color: var(--theme-seo-color);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-items: center;
+    justify-content: center;
+}
+
+.no-touch {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.full-container {
+    display: flex;
+    max-width: 70rem;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inside-container {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-title-container h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--theme-color);
+}
+
+#nav-menu-container a {
+    font-size: 1.25rem;
+    font-weight: normal;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    transition: 100ms background-color;
+    border-radius: 0.25rem;
+    background: transparent;
+    border: none;
+}
+
+#nav-menu-container a:hover {
+    cursor: pointer;
+    background-color: rgba(229, 231, 235, 0.08);
+    transition: 100ms background-color;
+}
+
+#nav-menu-icon {
+    display: none;
+    padding: 0.5rem 0.5rem 0 0.5rem !important;
+}
+
+#nav-menu-icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#nav-menu-icon.mobile-list-active svg {
+    fill: var(--theme-color);
+}
